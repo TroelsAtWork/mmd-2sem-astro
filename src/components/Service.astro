@@ -5,13 +5,14 @@ import Label from "./Label.astro";
 ---
 
 <div
-  class=`service ${out && "dim"}`
+  class={out ? "service dim" : "service"}
   style=`border-top: 4px solid ${serviceColor}`
 >
   {kampagne && <Label tilbud="50%" />}
   <h3>{serviceTitle}</h3>
   <p>{serviceBeskrivelse}</p>
 </div>
+
 <style>
   .dim {
     filter: blur(2px) grayscale(1);
