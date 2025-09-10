@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import caseImage from "../assets/maldives.jpg";
+---
+
+<Layout>
+  <h1>Cases</h1>
+  <Image
+    src={caseImage}
+    alt="A beautiful view of the Maldives"
+    width="600"
+    height="400"
+  />
+</Layout>

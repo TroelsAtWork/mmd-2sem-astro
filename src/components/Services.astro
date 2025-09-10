@@ -1,0 +1,47 @@
+---
+import Service from "./Service.astro";
+---
+
+<section id="services">
+  <h2>Vores Services</h2>
+  <div class="services-container">
+    <Service
+      serviceTitle="Service 1"
+      serviceBeskrivelse="Beskrivelse af service 1"
+      serviceColor="#667eea"
+    />
+    <Service
+      serviceTitle="Service 2"
+      serviceBeskrivelse="Beskrivelse af service 2"
+      serviceColor="#ff6b6b"
+    />
+    <Service
+      serviceTitle="Service 3"
+      serviceBeskrivelse="Beskrivelse af service 3"
+      serviceColor="#48bb78"
+    />
+  </div>
+</section>
+<style>
+  /* Services Section */
+  #services {
+    padding: 5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  #services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    color: #2d3748;
+  }
+
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+</style>

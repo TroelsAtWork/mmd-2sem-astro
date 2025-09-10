@@ -1,0 +1,33 @@
+---
+const { serviceTitle, serviceBeskrivelse, serviceColor } = Astro.props;
+---
+
+<div class="service" style=`border-top: 4px solid ${serviceColor}`>
+  <h3>{serviceTitle}</h3>
+  <p>{serviceBeskrivelse}</p>
+</div>
+<style>
+  .service {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    text-align: center;
+  }
+
+  .service h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2d3748;
+  }
+
+  .service p {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+</style>
