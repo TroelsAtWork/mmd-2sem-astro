@@ -8,7 +8,8 @@ import Label from "./Label.astro";
   class={out ? "service dim" : "service"}
   style=`border-top: 4px solid ${serviceColor}`
 >
-  {kampagne && <Label tilbud={kampagne} />}
+  {kampagne && <Label {kampagne} />}
+
   <h3>{serviceTitle}</h3>
   <p>{serviceBeskrivelse}</p>
 </div>
