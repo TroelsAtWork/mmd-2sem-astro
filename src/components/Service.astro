@@ -1,12 +1,18 @@
 ---
-const { serviceTitle, serviceBeskrivelse, serviceColor } = Astro.props;
+const { serviceTitle, serviceBeskrivelse, serviceColor, out } = Astro.props;
 ---
 
-<div class="service" style=`border-top: 4px solid ${serviceColor}`>
+<div
+  class=`service ${out && "dim"}`
+  style=`border-top: 4px solid ${serviceColor}`
+>
   <h3>{serviceTitle}</h3>
   <p>{serviceBeskrivelse}</p>
 </div>
 <style>
+  .dim {
+    filter: blur(3px) grayscale(1);
+  }
   .service {
     background: white;
     padding: 2.5rem;
