@@ -1,11 +1,14 @@
 ---
-const { serviceTitle, serviceBeskrivelse, serviceColor, out } = Astro.props;
+const { serviceTitle, serviceBeskrivelse, serviceColor, out, kampagne } =
+  Astro.props;
+import Label from "./Label.astro";
 ---
 
 <div
   class=`service ${out && "dim"}`
   style=`border-top: 4px solid ${serviceColor}`
 >
+  {kampagne && <Label />}
   <h3>{serviceTitle}</h3>
   <p>{serviceBeskrivelse}</p>
 </div>
@@ -14,6 +17,7 @@ const { serviceTitle, serviceBeskrivelse, serviceColor, out } = Astro.props;
     filter: blur(3px) grayscale(1);
   }
   .service {
+    position: relative;
     background: white;
     padding: 2.5rem;
     border-radius: 12px;
