@@ -8,13 +8,13 @@ import Label from "./Label.astro";
   class=`service ${out && "dim"}`
   style=`border-top: 4px solid ${serviceColor}`
 >
-  {kampagne && <Label />}
+  {kampagne && <Label tilbud="50%" />}
   <h3>{serviceTitle}</h3>
   <p>{serviceBeskrivelse}</p>
 </div>
 <style>
   .dim {
-    filter: blur(3px) grayscale(1);
+    filter: blur(2px) grayscale(1);
   }
   .service {
     position: relative;

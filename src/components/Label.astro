@@ -1,5 +1,9 @@
+---
+const { tilbud } = Astro.props;
+---
+
 <div>
-    <h3>Kampagnepris!</h3>
+    <h3>Kampagne {tilbud}</h3>
 </div>
 
 <style>
@@ -13,5 +17,6 @@
         background-color: yellow;
         padding: 0.8rem;
         border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
 </style>
