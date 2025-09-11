@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 
 <div class="service" style=`border-top: 4px solid ${serviceColor}`>
   <h3>{serviceTitle}</h3>
-  <Image src={imgSrc} alt="servicebillede" />
+  <Image src={imgSrc} alt="servicebillede" width="350px" />
   <p>{serviceBeskrivelse}</p>
 </div>
 <style>
@@ -31,9 +31,5 @@ import { Image } from "astro:assets";
     color: #718096;
     font-size: 1rem;
     line-height: 1.6;
-  }
-  img {
-    max-width: 100%;
-    aspect-ratio: 65/80;
   }
 </style>
