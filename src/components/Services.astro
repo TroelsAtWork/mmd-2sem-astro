@@ -1,5 +1,7 @@
 ---
 import Service from "./Service.astro";
+import astroLogo from "../assets/astro.png";
+import jsLogo from "../assets/js.png";
 ---
 
 <section id="services">
@@ -9,16 +11,19 @@ import Service from "./Service.astro";
       serviceTitle="Service 1"
       serviceBeskrivelse="Beskrivelse af service 1"
       serviceColor="#667eea"
+      serviceImage={jsLogo}
     />
     <Service
       serviceTitle="Service 2"
       serviceBeskrivelse="Beskrivelse af service 2"
       serviceColor="#ff6b6b"
+      serviceImage={astroLogo}
     />
     <Service
       serviceTitle="Service 3"
       serviceBeskrivelse="Beskrivelse af service 3"
       serviceColor="#48bb78"
+      serviceImage={jsLogo}
     />
   </div>
 </section>
