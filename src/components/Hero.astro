@@ -1,5 +1,10 @@
+---
+import { Image } from "astro:assets";
+import myImg from "../assets/maldives.jpg";
+---
+
 <section id="hero">
-  <h2>Dette er et Hero-Image</h2>
+  <Image src={myImg} alt="Hero billede" />
   <p>Her er noget introduktionstekst om denne side.</p>
   <button>Lær Mere</button>
 </section>

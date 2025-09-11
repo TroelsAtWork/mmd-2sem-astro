@@ -1,9 +1,11 @@
 ---
-const { serviceTitle, serviceBeskrivelse, serviceColor } = Astro.props;
+const { serviceTitle, serviceBeskrivelse, serviceColor, imgSrc } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
 <div class="service" style=`border-top: 4px solid ${serviceColor}`>
   <h3>{serviceTitle}</h3>
+  <Image src={imgSrc} alt="servicebillede" />
   <p>{serviceBeskrivelse}</p>
 </div>
 <style>
@@ -29,5 +31,9 @@ const { serviceTitle, serviceBeskrivelse, serviceColor } = Astro.props;
     color: #718096;
     font-size: 1rem;
     line-height: 1.6;
+  }
+  img {
+    max-width: 100%;
+    aspect-ratio: 65/80;
   }
 </style>

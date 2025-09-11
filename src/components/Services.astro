@@ -1,5 +1,8 @@
 ---
 import Service from "./Service.astro";
+import later from "../assets/later.jpg";
+import literaly from "../assets/literaly.jpg";
+import imaginary from "../assets/imaginary.jpg";
 ---
 
 <section id="services">
@@ -9,16 +12,19 @@ import Service from "./Service.astro";
       serviceTitle="Service 1"
       serviceBeskrivelse="Beskrivelse af service 1"
       serviceColor="#667eea"
+      imgSrc={imaginary}
     />
     <Service
       serviceTitle="Service 2"
       serviceBeskrivelse="Beskrivelse af service 2"
       serviceColor="#ff6b6b"
+      imgSrc={literaly}
     />
     <Service
       serviceTitle="Service 3"
       serviceBeskrivelse="Beskrivelse af service 3"
       serviceColor="#48bb78"
+      imgSrc={later}
     />
   </div>
 </section>
