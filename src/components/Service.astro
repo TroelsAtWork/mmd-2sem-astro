@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-const { serviceTitle, serviceBeskrivelse, serviceColor, serviceImage } =
+const { serviceTitle, serviceBeskrivelse, serviceColor, serviceImage, link } =
   Astro.props;
 ---
 
@@ -8,6 +8,8 @@ const { serviceTitle, serviceBeskrivelse, serviceColor, serviceImage } =
   <h3>{serviceTitle}</h3>
   <p>{serviceBeskrivelse}</p>
   <Image src={serviceImage} alt="astro logo" />
+  <br />
+  <a href={link}>Læs mere</a>
 </div>
 <style>
   .service {
