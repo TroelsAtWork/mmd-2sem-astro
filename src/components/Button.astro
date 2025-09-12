@@ -1,0 +1,22 @@
+---
+const { link } = Astro.props;
+---
+
+<a href={link}>Lær Mere</a>
+<style>
+  a {
+    background-color: #48bb78;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+  }
+
+  a:hover {
+    background-color: #38a169;
+  }
+</style>
