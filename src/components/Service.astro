@@ -1,15 +1,31 @@
 ---
 import { Image } from "astro:assets";
-const { serviceTitle, serviceBeskrivelse, serviceColor, serviceImage } =
-  Astro.props;
+import Button from "./Button.astro";
+const {
+  serviceTitle,
+  serviceBeskrivelse,
+  serviceColor,
+  serviceImage,
+  link,
+  udsolgt,
+} = Astro.props;
+console.log(udsolgt);
 ---
 
-<div class="service" style=`border-top: 4px solid ${serviceColor}`>
+<div
+  class={udsolgt ? "service dim" : "service"}
+  style=`border-top: 4px solid ${serviceColor}`
+>
   <h3>{serviceTitle}</h3>
   <p>{serviceBeskrivelse}</p>
-  <Image src={serviceImage} alt="astro logo" />
+  {serviceImage && <Image src={serviceImage} alt="astro logo" />}
+  <br />
+  {!udsolgt && <Button link={link} />}
 </div>
 <style>
+  .dim {
+    filter: grayscale(1) blur(5px);
+  }
   .service {
     background: white;
     padding: 2.5rem;
