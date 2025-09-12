@@ -18,7 +18,7 @@ console.log(udsolgt);
 >
   <h3>{serviceTitle}</h3>
   <p>{serviceBeskrivelse}</p>
-  {serviceImage && <Image src={serviceImage} alt="astro logo" />}
+  <Image src={serviceImage} alt="astro logo" />
   <br />
   {!udsolgt && <Button link={link} />}
 </div>
